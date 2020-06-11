@@ -23,6 +23,19 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Componentes/Modals/mensaje/mensaje.component.html":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Componentes/Modals/mensaje/mensaje.component.html ***!
+  \*********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 matDialogTitle>Mensaje</h1>\n\n<mat-dialog-content>\n    <div [formGroup]=\"formMensaje\">\n        <div class=\"form-group\">\n            <label for=\"my-input\">Correo Electronico</label>\n            <input id=\"my-input\" class=\"form-control\" formControlName=\"correo\" type=\"email\">\n            <small *ngIf=\"formMensaje.controls['correo'].hasError('email')\" class=\"text-danger\">No es un correo Electonico</small>\n        </div>\n        <div class=\"form-group\">\n            <label for=\"my-input\">Numero de Telefono</label>\n            <input id=\"my-input\" class=\"form-control\" formControlName=\"telefono\" type=\"number\">\n            <small *ngIf=\"formMensaje.controls['telefono'].hasError('min')\" class=\"text-danger\">El numero debe estar entre 7 y 15 digitos</small>\n            <small *ngIf=\"formMensaje.controls['telefono'].hasError('max')\" class=\"text-danger\">El numero debe estar entre 7 y 15 digitos</small>\n        </div>\n        <div class=\"form-group\">\n            <label for=\"my-textarea\">Mensaje</label>\n            <textarea id=\"my-textarea\" class=\"form-control\" formControlName=\"mensaje\" rows=\"4\"></textarea>\n            <small *ngIf=\"!formMensaje.controls['mensaje'].valid\" class=\"text-danger\">Mensaje Requerido</small>\n        </div>\n    </div>\n</mat-dialog-content>\n\n<mat-dialog-actions>\n    <button (click)=\"sendMensaje()\" type=\"button\" mat-button>Enviar</button>\n    <button mat-button matDialogClose>Cerrar</button>\n\n</mat-dialog-actions>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Componentes/intro/intro.component.html":
 /*!**********************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Componentes/intro/intro.component.html ***!
@@ -32,7 +45,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"after\"></div>\n<div class=\"main vh-100 w-100  d-flex justify-content-center align-items-center\">\n    <div class=\"row w-100\">\n        <div class=\"col-md-6 col-10 offset-md-0 offset-1   text-white center-h-v\">\n            <div class=\"text-md-left text-center\">\n                <h1 class=\"display-4\">Repaired electronic</h1>\n                <p class=\"lead\">Reparaciones de Electrodomesticos</p>\n                <hr class=\"bg-white my-4\">\n                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, doloremque molestias eligendi reprehenderit temporibus vero unde quae ipsam ut corrupti sequi quia iusto mollitia nesciunt repellat illum, iste fuga ullam?</p>\n                <button class=\"d-block d-md-none btn btn-primary m-auto\" type=\"button\">Enviar Mensaje</button>\n            </div>\n        </div>\n        <div class=\"col-md-6 col-12  d-md-block d-none\">\n            <div class=\"card w-75 m-auto\">\n                <div class=\"card-header\">\n                    Mensaje\n                </div>\n                <div [formGroup]=\"formMensaje\" class=\"card-body\">\n                    <div class=\"form-group\">\n                        <label for=\"my-input\">Correo Electronico</label>\n                        <input id=\"my-input\" class=\"form-control\" formControlName=\"correo\" type=\"email\">\n                        <small *ngIf=\"formMensaje.controls['correo'].hasError('email')\" class=\"text-danger\">No es un correo Electonico</small>\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"my-input\">Numero de Telefono</label>\n                        <input id=\"my-input\" class=\"form-control\" formControlName=\"telefono\" type=\"number\">\n                        <small *ngIf=\"formMensaje.controls['telefono'].hasError('min')\" class=\"text-danger\">El numero debe estar entre 7 y 15 digitos</small>\n                        <small *ngIf=\"formMensaje.controls['telefono'].hasError('max')\" class=\"text-danger\">El numero debe estar entre 7 y 15 digitos</small>\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"my-textarea\">Mensaje</label>\n                        <textarea id=\"my-textarea\" class=\"form-control\" formControlName=\"mensaje\" rows=\"4\"></textarea>\n                        <small *ngIf=\"!formMensaje.controls['mensaje'].valid\" class=\"text-danger\">Mensaje Requerido</small>\n                    </div>\n                    <div>\n                        <button (click)=\"sendMensaje()\" class=\"btn btn-primary\" type=\"button\">Enviar</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"after\"></div>\n<div class=\"main vh-100 w-100  d-flex justify-content-center align-items-center\">\n    <div class=\"row w-100\">\n        <div class=\"col-md-6 col-10 offset-md-0 offset-1   text-white center-h-v\">\n            <div class=\"text-md-left text-center\">\n                <h1 class=\"display-4\">Repaired electronic</h1>\n                <p class=\"lead\">Reparaciones de Electrodomesticos</p>\n                <hr class=\"bg-white my-4\">\n                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, doloremque molestias eligendi reprehenderit temporibus vero unde quae ipsam ut corrupti sequi quia iusto mollitia nesciunt repellat illum, iste fuga ullam?</p>\n                <button class=\"d-block d-md-none btn btn-primary m-auto\" (click)=\"openDialog()\" type=\"button\">Enviar Mensaje</button>\n            </div>\n        </div>\n        <div class=\"col-md-6 col-12  d-md-block d-none\">\n            <div class=\"card w-75 m-auto\">\n                <div class=\"card-header\">\n                    Mensaje\n                </div>\n                <div [formGroup]=\"formMensaje\" class=\"card-body\">\n                    <div class=\"form-group\">\n                        <label for=\"my-input\">Correo Electronico</label>\n                        <input id=\"my-input\" class=\"form-control\" formControlName=\"correo\" type=\"email\">\n                        <small *ngIf=\"formMensaje.controls['correo'].hasError('email')\" class=\"text-danger\">No es un correo Electonico</small>\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"my-input\">Numero de Telefono</label>\n                        <input id=\"my-input\" class=\"form-control\" formControlName=\"telefono\" type=\"number\">\n                        <small *ngIf=\"formMensaje.controls['telefono'].hasError('min')\" class=\"text-danger\">El numero debe estar entre 7 y 15 digitos</small>\n                        <small *ngIf=\"formMensaje.controls['telefono'].hasError('max')\" class=\"text-danger\">El numero debe estar entre 7 y 15 digitos</small>\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"my-textarea\">Mensaje</label>\n                        <textarea id=\"my-textarea\" class=\"form-control\" formControlName=\"mensaje\" rows=\"4\"></textarea>\n                        <small *ngIf=\"!formMensaje.controls['mensaje'].valid\" class=\"text-danger\">Mensaje Requerido</small>\n                    </div>\n                    <div>\n                        <button (click)=\"sendMensaje()\" class=\"btn btn-primary\" type=\"button\">Enviar</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -45,7 +58,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\n    <nav #nav class=\"navbar navbar-expand-lg navbar-dark  fixed-top\">\n        <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul class=\"navbar-nav m-auto\">\n                <li class=\"nav-item active hoverable\">\n                    <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\n                </li>\n                <li class=\"nav-item hoverable\">\n                    <a class=\"nav-link\" href=\"#\">Link</a>\n                </li>\n                <li class=\"nav-item dropdown hoverable\">\n                    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        Dropdown\n                    </a>\n                    <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n                        <a class=\"dropdown-item\" href=\"#\">Action</a>\n                        <a class=\"dropdown-item\" href=\"#\">Another action</a>\n                        <div class=\"dropdown-divider\"></div>\n                        <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n                    </div>\n                </li>\n                <li class=\"nav-item hoverable\">\n                    <a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>\n                </li>\n            </ul>\n        </div>\n    </nav>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n    <nav #nav class=\"navbar navbar-expand-lg navbar-dark  fixed-top\">\n        <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul class=\"navbar-nav m-auto\">\n                <li class=\"nav-item  hoverable\">\n                    <a class=\"nav-link\" [routerLink]=\"['/Home']\" routerLinkActive=\"active\">Inicio <span class=\"sr-only\">(current)</span></a>\n                </li>\n                <li class=\"nav-item hoverable\">\n                    <a class=\"nav-link\" href=\"#\">Lavadoras</a>\n                </li>\n                <li class=\"nav-item hoverable\">\n                    <a class=\"nav-link\" href=\"#\">Audio y video</a>\n                </li>\n                <li class=\"nav-item hoverable\">\n                    <a class=\"nav-link\" [routerLink]=\"['/Televisores']\" routerLinkActive=\"active\">Televisores</a>\n                </li>\n                <!-- <li class=\"nav-item dropdown hoverable\">\n                    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        Dropdown\n                    </a>\n                    <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n                        <a class=\"dropdown-item\" href=\"#\">Action</a>\n                        <a class=\"dropdown-item\" href=\"#\">Another action</a>\n                        <div class=\"dropdown-divider\"></div>\n                        <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n                    </div>\n                </li> -->\n                <!-- <li class=\"nav-item hoverable\">\n                    <a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>\n                </li> -->\n            </ul>\n        </div>\n    </nav>\n</div>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Componentes/not-found/not-found.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Componentes/not-found/not-found.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"center-h-v vh-100 vw-100 bg-dark p-4\">\n    <div class=\"display-4 text-center text-white\">Ruta no encontrada</div>\n</div>");
 
 /***/ }),
 
@@ -58,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\n    <button (click)=\"OpenOrCloseChat()\" class=\"btn btn-primary float-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#multiCollapseExample2\" aria-expanded=\"false\" aria-controls=\"multiCollapseExample2\">\n        Chat\n    </button>\n    <div class=\"row m-0 w-100  shadow collapse multi-collapse bg-transparent\" id=\"multiCollapseExample2\">\n        <!-- <mat-card class=\" chat col-md-3 offset-md-9  offset-0 col-12 \"> -->\n        <mat-card class=\" w-100 p-0 \">\n            <!-- <mat-card class=\" \"> -->\n            <mat-toolbar class=\"rounded bg-primary\">\n                <mat-toolbar-row>\n                    <!-- <mat-card-title-group> -->\n                    <img matCardAvatar src=\"assets/foto1.jpg\">\n                    <div class=\"ml-2\">\n                        <mat-card-title class=\"m-0 p-0\">Chat</mat-card-title>\n                        <mat-card-subtitle class=\"m-0 p-0 text-success\">En linea</mat-card-subtitle>\n                    </div>\n                    <!-- </mat-card-title-group> -->\n                </mat-toolbar-row>\n            </mat-toolbar>\n            <!-- <img matCardImage src=\"assets/foto1.jp\"> -->\n            <mat-card-content color=\"primary\" #chatbody id=\"chatbody\" class=\"chat-body px-2\">\n\n                <div *ngFor=\"let message of mensajes\">\n                    <ng-container *ngIf=\"message.isMy; else elseTemplate\">\n                        <div class=\"chat-sms-send \">\n                            <p class=\"text-break\">{{message.content}}\n                            </p>\n                        </div>\n                    </ng-container>\n                    <ng-template #elseTemplate>\n                        <div class=\"chat-sms-recived\">\n                            <p class=\"text-break\">{{message.content}}\n                            </p>\n                        </div>\n                    </ng-template>\n                </div>\n\n            </mat-card-content>\n\n            <div class=\"px-2\">\n                <!-- <mat-card-actions align=\"start\"> -->\n                <mat-form-field class=\"w-100\" appearance=\"outline\">\n                    <mat-label>Escriba su mensaje</mat-label>\n                    <button (click)=\"sendMessageFile()\" class=\"\" mat-icon-button matPrefix>\n                                    <mat-icon>send</mat-icon>\n                                </button>\n                    <textarea (keyup)=\"keyUpSms()\" [(ngModel)]=\"mensaje.content\" class=\"\" matInput cdkTextareaAutosize #autosize=\"cdkTextareaAutosize\" cdkAutosizeMinRows=\"1\" cdkAutosizeMaxRows=\"3\"></textarea>\n                    <button [disabled]='!btnIsValid' (click)=\"sendMessage()\" class=\"\" mat-icon-button matSuffix>\n                                    <mat-icon>send</mat-icon>\n                                </button>\n                </mat-form-field>\n\n                <!-- </mat-card-actions> -->\n            </div>\n        </mat-card>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n    <button (click)=\"OpenOrCloseChat()\" color=\"primary\" class=\"float-right\" mat-fab type=\"button\" data-toggle=\"collapse\" data-target=\"#multiCollapseExample2\" aria-expanded=\"false\" aria-controls=\"multiCollapseExample2\">\n        <i class=\"fas fa-comments fa-2x\"></i>\n    </button>\n    <div class=\"row m-0 w-100  shadow collapse multi-collapse bg-transparent\" id=\"multiCollapseExample2\">\n        <!-- <mat-card class=\" chat col-md-3 offset-md-9  offset-0 col-12 \"> -->\n        <mat-card class=\" w-100\">\n            <!-- <mat-card class=\" \"> -->\n            <mat-card-header class=\"shadow\">\n                <div mat-card-avatar class=\"example-header-image\"></div>\n                <mat-card-title>Segoviano</mat-card-title>\n                <mat-card-subtitle class=\"text-success\"><strong>*</strong> En linea</mat-card-subtitle>\n            </mat-card-header>\n\n            <!-- <img matCardImage src=\"../../../assets/foto1.jp\"> -->\n            <mat-card-content #chatbody id=\"chatbody\" class=\"chat-body\">\n                <div *ngFor=\"let message of mensajes\">\n                    <ng-container *ngIf=\"message.isMy; else elseTemplate\">\n                        <div class=\"chat-sms-send \">\n                            <p class=\"text-break\">{{message.content}}\n                            </p>\n                        </div>\n                    </ng-container>\n                    <ng-template #elseTemplate>\n                        <div class=\"chat-sms-recived\">\n                            <p class=\"text-break\">{{message.content}}\n                            </p>\n                        </div>\n                    </ng-template>\n                </div>\n            </mat-card-content>\n\n            <mat-card-footer class=\"px-2\">\n                <!-- <mat-card-actions align=\"start\"> -->\n                <mat-form-field class=\"w-100\" appearance=\"outline\">\n                    <mat-label>Escriba su mensaje</mat-label>\n                    <button disabled=\"true\" (click)=\"sendMessageFile()\" class=\"\" mat-icon-button matPrefix>\n                                    <mat-icon>attach_file</mat-icon>\n                                </button>\n                    <textarea (keyup)=\"keyUpSms()\" [(ngModel)]=\"mensaje.content\" class=\"\" matInput cdkTextareaAutosize #autosize=\"cdkTextareaAutosize\" cdkAutosizeMinRows=\"1\" cdkAutosizeMaxRows=\"3\"></textarea>\n                    <button [disabled]='!btnIsValid' (click)=\"sendMessage()\" class=\"\" mat-icon-button matSuffix>\n                                    <mat-icon>send</mat-icon>\n                                </button>\n                </mat-form-field>\n\n                <!-- </mat-card-actions> -->\n            </mat-card-footer>\n        </mat-card>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -71,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"w-100  mb-5\">\n    <h2 class=\"font-weight-bold text-center display-4 mb-4\">Contactos</h2>\n    <div class=\"row\">\n        <div class=\"col-md-8 col-12\">\n            <div id=\"map_box\" class=\"rounded shadow\"></div>\n        </div>\n        <div class=\"col-md-4 col-12 center-h-v\">\n            <div class=\"text-primary\">\n\n\n                <div class=\"col mb-3\">\n                    <i class=\"fas fa-map-marker-alt fa-3x\"></i>\n                </div>\n                <div class=\"col mb-3\">\n                    Juan Tanca Marego y la que crusa\n                </div>\n\n                <!-- <div class=\"col-md-6 col-12\"> -->\n                <div class=\"col mb-3\">\n                    <!-- <img src=\"assets/ubicacion.png\" alt=\"\"> -->\n                    <i class=\"fab fa-facebook-f fa-3x\"></i>\n                </div>\n                <div class=\"col\">\n                    Segovia es gay\n                </div>\n                <!-- <div class=\"col-md-6 col-12\"> -->\n                <div class=\"col mb-3\">\n                    <i class=\"fab fa-instagram fa-3x\"></i>\n                </div>\n                <div class=\"col\">\n                    Juan Tanca Marego y la que crusa\n                </div>\n                <div class=\"col mb-3\">\n                    <i class=\"fas fa-phone fa-3x\"></i>\n                </div>\n                <div class=\"col\">\n                    09456235666\n                </div>\n                <div class=\"col mb-3\">\n                    <i class=\"fab fa-whatsapp fa-3x\"></i>\n                </div>\n                <div class=\"col\">\n                    1234567890\n                </div>\n            </div>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"w-100  mb-5\">\n    <h2 class=\"font-weight-bold text-center display-4 mb-4\">Contactos</h2>\n    <div class=\"row\">\n        <div class=\"col-md-8 col-12\">\n            <div id=\"map_box\" class=\"rounded shadow\"></div>\n        </div>\n        <div class=\"col-md-4 col-12 center-h-v\">\n            <div class=\"text-primary\">\n\n\n                <div class=\"col mb-2\">\n                    <i class=\"fas fa-map-marker-alt fa-3x\"></i>\n                </div>\n                <div class=\"col mb-3\">\n                    Juan Tanca Marego y la que crusa\n                </div>\n\n                <!-- <div class=\"col-md-6 col-12\"> -->\n                <div class=\"col mb-2\">\n                    <!-- <img src=\"assets/ubicacion.png\" alt=\"\"> -->\n                    <i class=\"fab fa-facebook-f fa-3x\"></i>\n                </div>\n                <div class=\"col mb-3\">\n                    Segovia es gay\n                </div>\n                <!-- <div class=\"col-md-6 col-12\"> -->\n                <div class=\"col mb-2\">\n                    <i class=\"fab fa-instagram fa-3x\"></i>\n                </div>\n                <div class=\"col mb-3\">\n                    Juan Tanca Marego y la que crusa\n                </div>\n                <div class=\"col mb-2\">\n                    <i class=\"fas fa-phone fa-3x\"></i>\n                </div>\n                <div class=\"col\">\n                    09456235666\n                </div>\n                <div class=\"col mb-3\">\n                    <i class=\"fab fa-whatsapp fa-3x\"></i>\n                </div>\n                <div class=\"col\">\n                    1234567890\n                </div>\n            </div>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -84,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"w-100  mt-5\">\n    <h2 class=\"font-weight-bold text-center display-4 mb-2\">Servicios</h2>\n    <div class=\"row\">\n        <div class=\"col-md-4 col-12\">\n            <div class=\"row\">\n                <div class=\"col-12 mt-md-4 m-2\">\n                    <h4><i class=\"fas fa-dollar-sign\"></i> Costo</h4>\n                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ducimus fugit alias sit quos perspiciatis tenetur ipsum est? Accusant</p>\n                </div>\n                <div class=\"col-12 mt-md-4 m-2\">\n                    <h4><i class=\"fas fa-briefcase\"></i> Garantia</h4>\n                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ducimus fugit alias sit quos perspiciatis tenetur ipsum est? Accusanti</p>\n                </div>\n                <div class=\"col-12 mt-md-4 m-2\">\n                    <h4><i class=\"fas fa-headset\"></i> Atención Personalizada</h4>\n                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ducimus fugit alias sit quos perspiciatis tenetur ipsum est? Accusanti</p>\n                </div>\n            </div>\n        </div>\n        <div class=\"col-md-4 col-12 p-4 center-h-v\"><img src=\"assets/servicios.jpg\" alt=\"\"></div>\n        <div class=\"col-md-4 col-12\">\n            <div class=\"row\">\n                <div class=\"col-12 mt-md-4 m-2\">\n                    <h4> <i class=\"fas fa-shuttle-van\"></i> Servicio a Domicilio</h4>\n                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ducimus fugit alias sit quos perspiciatis tenetur ipsum est? Accusant</p>\n                </div>\n                <div class=\"col-12 mt-md-4 m-2\">\n                    <h4> <i class=\"fas fa-cash-register\"></i> Planes de pago</h4>\n                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ducimus fugit alias sit quos perspiciatis tenetur ipsum est? Accusanti</p>\n                </div>\n                <div class=\"col-12 mt-md-4 m-2\">\n                    <h4>Parrafo</h4>\n                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ducimus fugit alias sit quos perspiciatis tenetur ipsum est? Accusanti</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"w-100  mb-5\">\n    <h2 class=\"font-weight-bold text-center display-4 mb-2\">Que Ofremos?</h2>\n    <div class=\"row\">\n        <div class=\"col-md-4 col-12\">\n            <div class=\"row\">\n                <div class=\"col-12 mt-md-4 m-2\">\n                    <h4><i class=\"fas fa-dollar-sign\"></i> Costo</h4>\n                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ducimus fugit alias sit quos perspiciatis tenetur ipsum est? Accusant</p>\n                </div>\n                <div class=\"col-12 mt-md-4 m-2\">\n                    <h4><i class=\"fas fa-briefcase\"></i> Garantia</h4>\n                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ducimus fugit alias sit quos perspiciatis tenetur ipsum est? Accusanti</p>\n                </div>\n                <div class=\"col-12 mt-md-4 m-2\">\n                    <h4><i class=\"fas fa-headset\"></i> Atención Personalizada</h4>\n                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ducimus fugit alias sit quos perspiciatis tenetur ipsum est? Accusanti</p>\n                </div>\n            </div>\n        </div>\n        <div class=\"col-md-4 col-12 p-4 center-h-v\"><img src=\"assets/servicios.jpg\" alt=\"\"></div>\n        <div class=\"col-md-4 col-12\">\n            <div class=\"row\">\n                <div class=\"col-12 mt-md-4 m-2\">\n                    <h4> <i class=\"fas fa-shuttle-van\"></i> Servicio a Domicilio</h4>\n                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ducimus fugit alias sit quos perspiciatis tenetur ipsum est? Accusant</p>\n                </div>\n                <div class=\"col-12 mt-md-4 m-2\">\n                    <h4> <i class=\"fas fa-cash-register\"></i> Planes de pago</h4>\n                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ducimus fugit alias sit quos perspiciatis tenetur ipsum est? Accusanti</p>\n                </div>\n                <div class=\"col-12 mt-md-4 m-2\">\n                    <h4>Parrafo</h4>\n                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ducimus fugit alias sit quos perspiciatis tenetur ipsum est? Accusanti</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -110,7 +136,33 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"w-100  my-5\">\n    <h2 class=\"font-weight-bold text-center display-4 mb-4\">Reparación</h2>\n    <div class=\"row\">\n        <div class=\"col-12 col-md-6\">\n            <img src=\"assets/foto1.jpg\" class=\"rounded shadow\" alt=\"\">\n        </div>\n        <div class=\"col-12 col-md-6 center-h-v text-justify  p-3\">\n            <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum in eveniet! Sed odit veniam ad dolore vitae, similique repudiandae, laudantium quibusdam natus tempore cupiditate beatae quisquam ducimus, animi necessitatibus!</p>\n        </div>\n    </div>\n    <div class=\"row\">\n        <div class=\"col-12 col-md-6 center-h-v text-justify  p-3 order-1 order-md-0\">\n            <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum in eveniet! Sed odit veniam ad dolore vitae, similique repudiandae, laudantium quibusdam natus tempore cupiditate beatae quisquam ducimus, animi necessitatibus!</p>\n        </div>\n        <div class=\"col-12 col-md-6\">\n            <img src=\"assets/foto2.jpg\" class=\"rounded shadow\" alt=\"\">\n        </div>\n    </div>\n    <div class=\"row\">\n        <div class=\"col-12 col-md-6\">\n            <img src=\"assets/foto4 (1).jpg\" class=\"rounded shadow\" alt=\"\">\n        </div>\n        <div class=\"col-12 col-md-6 center-h-v text-justify p-3\">\n            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum in eveniet! Sed odit veniam ad dolore vitae, similique repudiandae, laudantium quibusdam natus tempore cupiditate beatae quisquam ducimus, animi necessitatibus!</p>\n        </div>\n    </div>\n    <div class=\"row\">\n        <div class=\"col-12 col-md-6 center-h-v text-justify  p-3 order-1 order-md-0\">\n            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum in eveniet! Sed odit veniam ad dolore vitae, similique repudiandae, laudantium quibusdam natus tempore cupiditate beatae quisquam ducimus, animi necessitatibus!</p>\n        </div>\n        <div class=\"col-12 col-md-6\">\n            <img src=\"assets/foto4 (2).jpg\" class=\"rounded shadow\" alt=\"\">\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"w-100  my-5\">\n    <h2 class=\"font-weight-bold text-center display-4 mb-2\">Reparación</h2>\n    <p class=\"lead text-center mb-5\">Reparaciones de lavadoras televisores y mas </p>\n    <div class=\"row mb-md-5\">\n        <div class=\"col-12 col-md-6 center-h-v\">\n            <img src=\"assets/tvOk.png\" class=\"img-fluid tv\" alt=\"\">\n        </div>\n        <div class=\"col-12 col-md-6 center-h-v text-justify  p-3\">\n            <div class=\"text-center\">\n                <h4>Televisores</h4>\n                <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum in eveniet! Sed odit veniam ad dolore vitae, similique repudiandae, laudantium quibusdam natus tempore cupiditate beatae quisquam ducimus, animi necessitatibus!\n                    <br>\n                    <a mat-raised-button color=\"primary\" href=\"\">Ver más</a>\n                </p>\n            </div>\n        </div>\n    </div>\n    <div class=\"row mb-md-5\">\n        <div class=\"col-12 col-md-6 center-h-v text-justify  p-3 order-1 order-md-0\">\n            <div class=\"text-center\">\n                <h4>Refrigeradoras</h4>\n                <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum in eveniet! Sed odit veniam ad dolore vitae, similique repudiandae, laudantium quibusdam natus tempore cupiditate beatae quisquam ducimus, animi necessitatibus!\n                    <br>\n                    <a mat-raised-button color=\"primary\" href=\"\">Ver más</a>\n                </p>\n            </div>\n        </div>\n        <div class=\"col-12 col-md-6 center-h-v\">\n\n\n            <img src=\"assets/refrigeradoraOK.png\" class=\"img-fluid refri\" alt=\"\">\n        </div>\n    </div>\n    <div class=\"row mb-md-5\">\n        <div class=\"col-12 col-md-6 center-h-v\">\n            <img src=\"assets/lavadoraOK.png\" class=\"img-fluid lavadora\" alt=\"\">\n        </div>\n        <div class=\"col-12 col-md-6 center-h-v text-justify p-3\">\n            <div class=\"text-center\">\n                <h4>Lavadoras</h4>\n                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum in eveniet! Sed odit veniam ad dolore vitae, similique repudiandae, laudantium quibusdam natus tempore cupiditate beatae quisquam ducimus, animi necessitatibus!\n                    <br>\n                    <a mat-raised-button color=\"primary\" href=\"\">Ver más</a>\n                </p>\n            </div>\n        </div>\n    </div>\n    <div class=\"row\">\n        <div class=\"col-12 col-md-6 center-h-v text-justify  p-3 order-1 order-md-0\">\n            <div class=\"text-center\">\n                <h4>Otros</h4>\n                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum in eveniet! Sed odit veniam ad dolore vitae, similique repudiandae, laudantium quibusdam natus tempore cupiditate beatae quisquam ducimus, animi necessitatibus!\n                    <br>\n                    <a mat-raised-button color=\"primary\" href=\"\">Ver más</a>\n                </p>\n            </div>\n        </div>\n        <div class=\"col-12 col-md-6\">\n            <img src=\"assets/otrosOK.png\" class=\"img-fluid otros\" alt=\"\">\n        </div>\n    </div>\n</div>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Modulos/home/home/home.component.html":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Modulos/home/home/home.component.html ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<app-intro></app-intro>\n<div class=\"container\">\n    <app-section-text-img></app-section-text-img>\n    <app-section-ofertas></app-section-ofertas>\n    <!-- <app-section-servicios></app-section-servicios> -->\n    <app-section-contactos></app-section-contactos>\n</div>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Modulos/televisores/televisores/televisores.component.html":
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Modulos/televisores/televisores/televisores.component.html ***!
+  \******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main\">\n    <div class=\"row mx-0 mb-5  bg-dark header\">\n        <div class=\" col-6\">\n            <h1 class=\"display-4\">Sección Televisores</h1>\n            <p class=\"lead\">Reparaciones, matenimiento, Soluciones</p>\n            <hr class=\"my-4\">\n            <p>En esta sección podremos ver una galeria de algunas imagenes de trabajo realizados a si como algunos problemas que tenias los televisores y lo solucionamos</p>\n        </div>\n        <div class=\"col-6\"></div>\n    </div>\n    <div class=\" container\">\n        <div class=\"galeria mb-5\">\n            <h2 class=\"\">GALERIA</h2>\n            Aqui va la galeria\n        </div>\n        <div>\n            <h2 class=\"\">PROBLEMAS MÁS COMUNES SOLUCIONADOS</h2>\n            <div class=\"card-columns\">\n                <div class=\"card\">\n                    <div class=\"card-body\">\n                        <h5 class=\"card-title\">Title</h5>\n                        <p class=\"card-text\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam id repellendus dignissimos, libero quasi non cupiditate excepturi nobis aperiam repudiandae inventore culpa, delectus cum rerum, mollitia dicta soluta atque ipsa.</p>\n                    </div>\n                </div>\n                <div class=\"card\">\n                    <div class=\"card-body\">\n                        <h5 class=\"card-title\">Title</h5>\n                        <p class=\"card-text\">Content</p>\n                    </div>\n                </div>\n                <div class=\"card\">\n                    <div class=\"card-body\">\n                        <h5 class=\"card-title\">Title</h5>\n                        <p class=\"card-text\">Content</p>\n                    </div>\n                </div>\n                <div class=\"card\">\n                    <div class=\"card-body\">\n                        <h5 class=\"card-title\">Title</h5>\n                        <p class=\"card-text\">Content</p>\n                    </div>\n                </div>\n                <div class=\"card\">\n                    <div class=\"card-body\">\n                        <h5 class=\"card-title\">Title</h5>\n                        <p class=\"card-text\">Content</p>\n                    </div>\n                </div>\n                <div class=\"card\">\n                    <div class=\"card-body\">\n                        <h5 class=\"card-title\">Title</h5>\n                        <p class=\"card-text\">Content</p>\n                    </div>\n                </div>\n                <div class=\"card\">\n                    <div class=\"card-body\">\n                        <h5 class=\"card-title\">Title</h5>\n                        <p class=\"card-text\">Content</p>\n                    </div>\n                </div>\n                <div class=\"card\">\n                    <div class=\"card-body\">\n                        <h5 class=\"card-title\">Title</h5>\n                        <p class=\"card-text\">Content</p>\n                    </div>\n                </div>\n\n            </div>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -123,7 +175,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-nav-bar></app-nav-bar>\n<app-intro></app-intro>\n<div class=\"container\">\n    <app-section-text-img></app-section-text-img>\n    <app-section-ofertas></app-section-ofertas>\n    <!-- <app-section-servicios></app-section-servicios> -->\n    <app-section-contactos></app-section-contactos>\n</div>\n<div class=\"chat col-md-5 col-lg-4 col-xl-3 col-12\">\n    <app-section-chat></app-section-chat>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-nav-bar></app-nav-bar>\n<router-outlet></router-outlet>\n<div class=\"chat col-md-5 col-lg-4 col-xl-3 col-12\">\n    <app-section-chat></app-section-chat>\n</div>");
 
 /***/ }),
 
@@ -381,6 +433,84 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 
 /***/ }),
 
+/***/ "./src/app/Componentes/Modals/mensaje/mensaje.component.scss":
+/*!*******************************************************************!*\
+  !*** ./src/app/Componentes/Modals/mensaje/mensaje.component.scss ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0NvbXBvbmVudGVzL01vZGFscy9tZW5zYWplL21lbnNhamUuY29tcG9uZW50LnNjc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/Componentes/Modals/mensaje/mensaje.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/Componentes/Modals/mensaje/mensaje.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: MensajeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MensajeComponent", function() { return MensajeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _Servicios_snack_bar_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../Servicios/snack-bar.service */ "./src/app/Servicios/snack-bar.service.ts");
+
+
+
+
+let MensajeComponent = class MensajeComponent {
+    constructor(servicioSnackBar) {
+        this.servicioSnackBar = servicioSnackBar;
+        this.formMensaje = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
+            correo: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email]),
+            telefono: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].min(999999), _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].max(999999999999999)]),
+            mensaje: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].minLength(15), _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].maxLength(1000)])),
+        });
+    }
+    ngOnInit() {
+    }
+    sendMensaje() {
+        // console.log(this.formMensaje.value);
+        // console.log(this.formMensaje.valid);
+        // console.log(!this.formMensaje.controls['correo'].hasError('email'))
+        // console.log(!this.formMensaje.controls['telefono'].hasError('min'));
+        // console.log(!this.formMensaje.controls['correo'].hasError('email') || !this.formMensaje.controls['telefono'].hasError('min'));
+        if (this.formMensaje.controls['mensaje'].valid) {
+            if (this.formMensaje.controls['correo'].value.trim() != "" || this.formMensaje.controls['telefono'].value != null) {
+                if (this.formMensaje.controls['correo'].valid && this.formMensaje.controls['telefono'].valid) {
+                    alert("lo logre");
+                }
+                else
+                    this.servicioSnackBar.openSnackBar('El correo o el numero telefonico estan mal', 'Error');
+            }
+            else
+                this.servicioSnackBar.openSnackBar('Debe ingresar el correo o el numero de telefono', 'Error');
+        }
+        else
+            this.servicioSnackBar.openSnackBar('Mensaje Invalido', 'Error');
+    }
+};
+MensajeComponent.ctorParameters = () => [
+    { type: _Servicios_snack_bar_service__WEBPACK_IMPORTED_MODULE_3__["SnackBarService"] }
+];
+MensajeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-mensaje',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./mensaje.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/Componentes/Modals/mensaje/mensaje.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./mensaje.component.scss */ "./src/app/Componentes/Modals/mensaje/mensaje.component.scss")).default]
+    })
+], MensajeComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/Componentes/intro/intro.component.scss":
 /*!********************************************************!*\
   !*** ./src/app/Componentes/intro/intro.component.scss ***!
@@ -408,13 +538,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _Servicios_snack_bar_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Servicios/snack-bar.service */ "./src/app/Servicios/snack-bar.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _Modals_mensaje_mensaje_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Modals/mensaje/mensaje.component */ "./src/app/Componentes/Modals/mensaje/mensaje.component.ts");
+
+
 
 
 
 
 let IntroComponent = class IntroComponent {
-    constructor(servicioSnackBar) {
+    constructor(servicioSnackBar, dialog) {
         this.servicioSnackBar = servicioSnackBar;
+        this.dialog = dialog;
         this.formMensaje = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
             correo: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email]),
             telefono: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].min(999999), _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].max(999999999999999)]),
@@ -443,12 +578,13 @@ let IntroComponent = class IntroComponent {
         else
             this.servicioSnackBar.openSnackBar('Mensaje Invalido', 'Error');
     }
-    comprobar() {
-        return false;
+    openDialog() {
+        this.dialog.open(_Modals_mensaje_mensaje_component__WEBPACK_IMPORTED_MODULE_5__["MensajeComponent"], { panelClass: ['col-md-6', 'col-12'] });
     }
 };
 IntroComponent.ctorParameters = () => [
-    { type: _Servicios_snack_bar_service__WEBPACK_IMPORTED_MODULE_3__["SnackBarService"] }
+    { type: _Servicios_snack_bar_service__WEBPACK_IMPORTED_MODULE_3__["SnackBarService"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialog"] }
 ];
 IntroComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -523,6 +659,50 @@ NavBarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/Componentes/not-found/not-found.component.scss":
+/*!****************************************************************!*\
+  !*** ./src/app/Componentes/not-found/not-found.component.scss ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0NvbXBvbmVudGVzL25vdC1mb3VuZC9ub3QtZm91bmQuY29tcG9uZW50LnNjc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/Componentes/not-found/not-found.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/Componentes/not-found/not-found.component.ts ***!
+  \**************************************************************/
+/*! exports provided: NotFoundComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotFoundComponent", function() { return NotFoundComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let NotFoundComponent = class NotFoundComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+NotFoundComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-not-found',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./not-found.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/Componentes/not-found/not-found.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./not-found.component.scss */ "./src/app/Componentes/not-found/not-found.component.scss")).default]
+    })
+], NotFoundComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/Componentes/section-chat/section-chat.component.scss":
 /*!**********************************************************************!*\
   !*** ./src/app/Componentes/section-chat/section-chat.component.scss ***!
@@ -532,7 +712,7 @@ NavBarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".mat-form-field {\n  margin-bottom: -1.2em;\n}\n\n.chat-body {\n  height: 40vh;\n  overflow-y: scroll;\n  font-family: \"Candara\";\n}\n\n.chat-body::-webkit-scrollbar {\n  background-color: transparent;\n  width: 9px;\n}\n\n.chat-body::-webkit-scrollbar-track {\n  background-color: transparent;\n}\n\n.chat-body::-webkit-scrollbar-thumb {\n  background-color: rgba(66, 64, 64, 0.356);\n  border-radius: 5px;\n}\n\n.chat-sms-send {\n  float: right;\n  color: black;\n  display: block;\n  width: 80%;\n  text-align: right;\n}\n\n.chat-sms-send p {\n  background-color: yellow;\n  display: inline-block;\n  min-width: 3%;\n  max-width: 100%;\n  padding: 5px;\n  border-radius: 7px 7px 0 7px;\n}\n\n.chat-sms-recived {\n  float: left;\n  color: black;\n  width: 80%;\n  text-align: left;\n}\n\n.chat-sms-recived p {\n  background-color: yellow;\n  display: inline-block;\n  padding: 5px;\n  border-radius: 7px 7px 7px 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50ZXMvc2VjdGlvbi1jaGF0L0M6XFxVc2Vyc1xcRloxODkxXFxEZXNrdG9wXFxQcm95ZWN0b3NcXEFuZ3VsYXJcXHBhZ2VzZWdvdmlhL3NyY1xcYXBwXFxDb21wb25lbnRlc1xcc2VjdGlvbi1jaGF0XFxzZWN0aW9uLWNoYXQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL0NvbXBvbmVudGVzL3NlY3Rpb24tY2hhdC9zZWN0aW9uLWNoYXQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFSSxxQkFBQTtBQ0FKOztBRElBO0VBQ0ksWUFBQTtFQUVBLGtCQUFBO0VBRUEsc0JBQUE7QUNISjs7QURNQTtFQUNJLDZCQUFBO0VBQ0EsVUFBQTtBQ0hKOztBRE1BO0VBQ0ksNkJBQUE7QUNISjs7QURPQTtFQUNJLHlDQUFBO0VBQ0Esa0JBQUE7QUNKSjs7QURRQTtFQUNJLFlBQUE7RUFDQSxZQUFBO0VBQ0EsY0FBQTtFQUNBLFVBQUE7RUFDQSxpQkFBQTtBQ0xKOztBRE1JO0VBQ0ksd0JBQUE7RUFDQSxxQkFBQTtFQUNBLGFBQUE7RUFDQSxlQUFBO0VBQ0EsWUFBQTtFQUNBLDRCQUFBO0FDSlI7O0FEUUE7RUFFSSxXQUFBO0VBQ0EsWUFBQTtFQUNBLFVBQUE7RUFDQSxnQkFBQTtBQ05KOztBRE9JO0VBQ0ksd0JBQUE7RUFDQSxxQkFBQTtFQUNBLFlBQUE7RUFDQSw0QkFBQTtBQ0xSIiwiZmlsZSI6InNyYy9hcHAvQ29tcG9uZW50ZXMvc2VjdGlvbi1jaGF0L3NlY3Rpb24tY2hhdC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtZm9ybS1maWVsZCB7XHJcbiAgICAvLyBiYWNrZ3JvdW5kLWNvbG9yOiByZWQ7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAtMS4yZW07XHJcbiAgICAvLyBwYWRkaW5nLWJvdHRvbTogMDtcclxufVxyXG5cclxuLmNoYXQtYm9keSB7XHJcbiAgICBoZWlnaHQ6IDQwdmg7XHJcbiAgICAvLyBiYWNrZ3JvdW5kLWNvbG9yOiBncmVlbjtcclxuICAgIG92ZXJmbG93LXk6IHNjcm9sbDtcclxuICAgIC8vIG92ZXJmbG93LXg6IGhpZGRlbjtcclxuICAgIGZvbnQtZmFtaWx5OiAnQ2FuZGFyYSc7XHJcbn1cclxuXHJcbi5jaGF0LWJvZHk6Oi13ZWJraXQtc2Nyb2xsYmFyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gICAgd2lkdGg6IDlweDtcclxufVxyXG5cclxuLmNoYXQtYm9keTo6LXdlYmtpdC1zY3JvbGxiYXItdHJhY2sge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgICAvLyB3aWR0aDogNXB4O1xyXG59XHJcblxyXG4uY2hhdC1ib2R5Ojotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDY2LCA2NCwgNjQsIDAuMzU2KTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcclxuICAgIC8vIHdpZHRoOiAzcHg7XHJcbn1cclxuXHJcbi5jaGF0LXNtcy1zZW5kIHtcclxuICAgIGZsb2F0OiByaWdodDtcclxuICAgIGNvbG9yOiBibGFjaztcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgd2lkdGg6IDgwJTtcclxuICAgIHRleHQtYWxpZ246IHJpZ2h0O1xyXG4gICAgcCB7XHJcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogeWVsbG93O1xyXG4gICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgICAgICBtaW4td2lkdGg6IDMlO1xyXG4gICAgICAgIG1heC13aWR0aDogMTAwJTtcclxuICAgICAgICBwYWRkaW5nOiA1cHg7XHJcbiAgICAgICAgYm9yZGVyLXJhZGl1czogN3B4IDdweCAwIDdweDtcclxuICAgIH1cclxufVxyXG5cclxuLmNoYXQtc21zLXJlY2l2ZWQge1xyXG4gICAgLy8gcGFkZGluZzogNXB4O1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICB3aWR0aDogODAlO1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIHAge1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHllbGxvdztcclxuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICAgICAgcGFkZGluZzogNXB4O1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDdweCA3cHggN3B4IDA7XHJcbiAgICB9XHJcbn0iLCIubWF0LWZvcm0tZmllbGQge1xuICBtYXJnaW4tYm90dG9tOiAtMS4yZW07XG59XG5cbi5jaGF0LWJvZHkge1xuICBoZWlnaHQ6IDQwdmg7XG4gIG92ZXJmbG93LXk6IHNjcm9sbDtcbiAgZm9udC1mYW1pbHk6IFwiQ2FuZGFyYVwiO1xufVxuXG4uY2hhdC1ib2R5Ojotd2Via2l0LXNjcm9sbGJhciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xuICB3aWR0aDogOXB4O1xufVxuXG4uY2hhdC1ib2R5Ojotd2Via2l0LXNjcm9sbGJhci10cmFjayB7XG4gIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xufVxuXG4uY2hhdC1ib2R5Ojotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoNjYsIDY0LCA2NCwgMC4zNTYpO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG59XG5cbi5jaGF0LXNtcy1zZW5kIHtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBjb2xvcjogYmxhY2s7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICB3aWR0aDogODAlO1xuICB0ZXh0LWFsaWduOiByaWdodDtcbn1cbi5jaGF0LXNtcy1zZW5kIHAge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB5ZWxsb3c7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgbWluLXdpZHRoOiAzJTtcbiAgbWF4LXdpZHRoOiAxMDAlO1xuICBwYWRkaW5nOiA1cHg7XG4gIGJvcmRlci1yYWRpdXM6IDdweCA3cHggMCA3cHg7XG59XG5cbi5jaGF0LXNtcy1yZWNpdmVkIHtcbiAgZmxvYXQ6IGxlZnQ7XG4gIGNvbG9yOiBibGFjaztcbiAgd2lkdGg6IDgwJTtcbiAgdGV4dC1hbGlnbjogbGVmdDtcbn1cbi5jaGF0LXNtcy1yZWNpdmVkIHAge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB5ZWxsb3c7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgcGFkZGluZzogNXB4O1xuICBib3JkZXItcmFkaXVzOiA3cHggN3B4IDdweCAwO1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".mat-form-field {\n  margin-bottom: -1.2em;\n}\n\n.chat-body {\n  height: 40vh;\n  overflow-y: scroll;\n  font-family: \"Candara\";\n}\n\n.chat-body::-webkit-scrollbar {\n  background-color: transparent;\n  width: 9px;\n}\n\n.chat-body::-webkit-scrollbar-track {\n  background-color: transparent;\n}\n\n.example-header-image {\n  background-image: url('imagen_default.jpg');\n  background-size: cover;\n}\n\n.chat-body::-webkit-scrollbar-thumb {\n  background-color: rgba(66, 64, 64, 0.356);\n  border-radius: 5px;\n}\n\n.chat-sms-send {\n  float: right;\n  color: black;\n  display: block;\n  width: 80%;\n  text-align: right;\n}\n\n.chat-sms-send p {\n  background-color: yellow;\n  display: inline-block;\n  min-width: 3%;\n  max-width: 100%;\n  padding: 5px;\n  border-radius: 7px 7px 0 7px;\n}\n\n.chat-sms-recived {\n  float: left;\n  color: black;\n  width: 80%;\n  text-align: left;\n}\n\n.chat-sms-recived p {\n  background-color: yellow;\n  display: inline-block;\n  padding: 5px;\n  border-radius: 7px 7px 7px 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50ZXMvc2VjdGlvbi1jaGF0L0M6XFxVc2Vyc1xcRloxODkxXFxEZXNrdG9wXFxQcm95ZWN0b3NcXEFuZ3VsYXJcXHBhZ2VzZWdvdmlhL3NyY1xcYXBwXFxDb21wb25lbnRlc1xcc2VjdGlvbi1jaGF0XFxzZWN0aW9uLWNoYXQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL0NvbXBvbmVudGVzL3NlY3Rpb24tY2hhdC9zZWN0aW9uLWNoYXQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFSSxxQkFBQTtBQ0FKOztBRElBO0VBQ0ksWUFBQTtFQUVBLGtCQUFBO0VBRUEsc0JBQUE7QUNISjs7QURNQTtFQUNJLDZCQUFBO0VBQ0EsVUFBQTtBQ0hKOztBRE1BO0VBQ0ksNkJBQUE7QUNISjs7QURPQTtFQUNJLDJDQUFBO0VBQ0Esc0JBQUE7QUNKSjs7QURPQTtFQUNJLHlDQUFBO0VBQ0Esa0JBQUE7QUNKSjs7QURRQTtFQUNJLFlBQUE7RUFDQSxZQUFBO0VBQ0EsY0FBQTtFQUNBLFVBQUE7RUFDQSxpQkFBQTtBQ0xKOztBRE1JO0VBQ0ksd0JBQUE7RUFDQSxxQkFBQTtFQUNBLGFBQUE7RUFDQSxlQUFBO0VBQ0EsWUFBQTtFQUNBLDRCQUFBO0FDSlI7O0FEUUE7RUFFSSxXQUFBO0VBQ0EsWUFBQTtFQUNBLFVBQUE7RUFDQSxnQkFBQTtBQ05KOztBRE9JO0VBQ0ksd0JBQUE7RUFDQSxxQkFBQTtFQUNBLFlBQUE7RUFDQSw0QkFBQTtBQ0xSIiwiZmlsZSI6InNyYy9hcHAvQ29tcG9uZW50ZXMvc2VjdGlvbi1jaGF0L3NlY3Rpb24tY2hhdC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtZm9ybS1maWVsZCB7XHJcbiAgICAvLyBiYWNrZ3JvdW5kLWNvbG9yOiByZWQ7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAtMS4yZW07XHJcbiAgICAvLyBwYWRkaW5nLWJvdHRvbTogMDtcclxufVxyXG5cclxuLmNoYXQtYm9keSB7XHJcbiAgICBoZWlnaHQ6IDQwdmg7XHJcbiAgICAvLyBiYWNrZ3JvdW5kLWNvbG9yOiBncmVlbjtcclxuICAgIG92ZXJmbG93LXk6IHNjcm9sbDtcclxuICAgIC8vIG92ZXJmbG93LXg6IGhpZGRlbjtcclxuICAgIGZvbnQtZmFtaWx5OiAnQ2FuZGFyYSc7XHJcbn1cclxuXHJcbi5jaGF0LWJvZHk6Oi13ZWJraXQtc2Nyb2xsYmFyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gICAgd2lkdGg6IDlweDtcclxufVxyXG5cclxuLmNoYXQtYm9keTo6LXdlYmtpdC1zY3JvbGxiYXItdHJhY2sge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgICAvLyB3aWR0aDogNXB4O1xyXG59XHJcblxyXG4uZXhhbXBsZS1oZWFkZXItaW1hZ2Uge1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi8uLi9hc3NldHMvaW1hZ2VuX2RlZmF1bHQuanBnJyk7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG59XHJcblxyXG4uY2hhdC1ib2R5Ojotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDY2LCA2NCwgNjQsIDAuMzU2KTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcclxuICAgIC8vIHdpZHRoOiAzcHg7XHJcbn1cclxuXHJcbi5jaGF0LXNtcy1zZW5kIHtcclxuICAgIGZsb2F0OiByaWdodDtcclxuICAgIGNvbG9yOiBibGFjaztcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgd2lkdGg6IDgwJTtcclxuICAgIHRleHQtYWxpZ246IHJpZ2h0O1xyXG4gICAgcCB7XHJcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogeWVsbG93O1xyXG4gICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgICAgICBtaW4td2lkdGg6IDMlO1xyXG4gICAgICAgIG1heC13aWR0aDogMTAwJTtcclxuICAgICAgICBwYWRkaW5nOiA1cHg7XHJcbiAgICAgICAgYm9yZGVyLXJhZGl1czogN3B4IDdweCAwIDdweDtcclxuICAgIH1cclxufVxyXG5cclxuLmNoYXQtc21zLXJlY2l2ZWQge1xyXG4gICAgLy8gcGFkZGluZzogNXB4O1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICB3aWR0aDogODAlO1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIHAge1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHllbGxvdztcclxuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICAgICAgcGFkZGluZzogNXB4O1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDdweCA3cHggN3B4IDA7XHJcbiAgICB9XHJcbn0iLCIubWF0LWZvcm0tZmllbGQge1xuICBtYXJnaW4tYm90dG9tOiAtMS4yZW07XG59XG5cbi5jaGF0LWJvZHkge1xuICBoZWlnaHQ6IDQwdmg7XG4gIG92ZXJmbG93LXk6IHNjcm9sbDtcbiAgZm9udC1mYW1pbHk6IFwiQ2FuZGFyYVwiO1xufVxuXG4uY2hhdC1ib2R5Ojotd2Via2l0LXNjcm9sbGJhciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xuICB3aWR0aDogOXB4O1xufVxuXG4uY2hhdC1ib2R5Ojotd2Via2l0LXNjcm9sbGJhci10cmFjayB7XG4gIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xufVxuXG4uZXhhbXBsZS1oZWFkZXItaW1hZ2Uge1xuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi8uLi8uLi9hc3NldHMvaW1hZ2VuX2RlZmF1bHQuanBnXCIpO1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xufVxuXG4uY2hhdC1ib2R5Ojotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoNjYsIDY0LCA2NCwgMC4zNTYpO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG59XG5cbi5jaGF0LXNtcy1zZW5kIHtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBjb2xvcjogYmxhY2s7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICB3aWR0aDogODAlO1xuICB0ZXh0LWFsaWduOiByaWdodDtcbn1cbi5jaGF0LXNtcy1zZW5kIHAge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB5ZWxsb3c7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgbWluLXdpZHRoOiAzJTtcbiAgbWF4LXdpZHRoOiAxMDAlO1xuICBwYWRkaW5nOiA1cHg7XG4gIGJvcmRlci1yYWRpdXM6IDdweCA3cHggMCA3cHg7XG59XG5cbi5jaGF0LXNtcy1yZWNpdmVkIHtcbiAgZmxvYXQ6IGxlZnQ7XG4gIGNvbG9yOiBibGFjaztcbiAgd2lkdGg6IDgwJTtcbiAgdGV4dC1hbGlnbjogbGVmdDtcbn1cbi5jaGF0LXNtcy1yZWNpdmVkIHAge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB5ZWxsb3c7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgcGFkZGluZzogNXB4O1xuICBib3JkZXItcmFkaXVzOiA3cHggN3B4IDdweCAwO1xufSJdfQ== */");
 
 /***/ }),
 
@@ -555,15 +735,7 @@ let SectionChatComponent = class SectionChatComponent {
     constructor() {
         this.mensaje = { isMy: true, type: 'string', content: null };
         this.mensajes = [
-            { isMy: true, type: 'string', content: 'Hola mundo' },
-            { isMy: true, type: 'string', content: 'Hola mundo' },
-            { isMy: false, type: 'string', content: 'Hola mundo' },
-            { isMy: true, type: 'string', content: 'Hola mundo' },
-            { isMy: true, type: 'string', content: 'Hola mundo Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum in eveniet! Sed odit veniam ad dolore vitae, similique repudiandae, laudantium quibusdam natus tempore cupiditate beatae quisquam ducimus, animi necessitatibus' },
-            { isMy: false, type: 'string', content: 'Hola mundo' },
-            { isMy: true, type: 'string', content: 'Hola mundo' },
-            { isMy: true, type: 'string', content: 'Hola mundo mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm' },
-            { isMy: false, type: 'string', content: 'Hola mundo Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe earum in eveniet! Sed odit veniam ad dolore vitae, similique repudiandae, laudantium quibusdam natus tempore cupiditate beatae quisquam ducimus, animi necessitatibus' },
+            { isMy: true, type: 'string', content: 'segovia es gay' },
         ];
         this.btnIsValid = false;
         this.isOpenChat = false;
@@ -611,6 +783,8 @@ let SectionChatComponent = class SectionChatComponent {
             default:
                 break;
         }
+    }
+    sendMessageFile() {
     }
 };
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -713,7 +887,7 @@ SectionContactosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("img {\n  width: 100%;\n  max-height: 300px;\n  min-height: 400px;\n}\n\nh4 {\n  color: #0275d8;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50ZXMvc2VjdGlvbi1vZmVydGFzL0M6XFxVc2Vyc1xcRloxODkxXFxEZXNrdG9wXFxQcm95ZWN0b3NcXEFuZ3VsYXJcXHBhZ2VzZWdvdmlhL3NyY1xcYXBwXFxDb21wb25lbnRlc1xcc2VjdGlvbi1vZmVydGFzXFxzZWN0aW9uLW9mZXJ0YXMuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL0NvbXBvbmVudGVzL3NlY3Rpb24tb2ZlcnRhcy9zZWN0aW9uLW9mZXJ0YXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxXQUFBO0VBQ0EsaUJBQUE7RUFDQSxpQkFBQTtBQ0NKOztBREVBO0VBQ0ksY0FBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvQ29tcG9uZW50ZXMvc2VjdGlvbi1vZmVydGFzL3NlY3Rpb24tb2ZlcnRhcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImltZyB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1heC1oZWlnaHQ6IDMwMHB4O1xyXG4gICAgbWluLWhlaWdodDogNDAwcHg7XHJcbn1cclxuXHJcbmg0IHtcclxuICAgIGNvbG9yOiAjMDI3NWQ4O1xyXG59IiwiaW1nIHtcbiAgd2lkdGg6IDEwMCU7XG4gIG1heC1oZWlnaHQ6IDMwMHB4O1xuICBtaW4taGVpZ2h0OiA0MDBweDtcbn1cblxuaDQge1xuICBjb2xvcjogIzAyNzVkODtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("img {\n  width: 100%;\n  max-height: 300px;\n  min-height: 400px;\n}\n\nh4 {\n  color: #0275d8;\n}\n\n.row {\n  margin: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50ZXMvc2VjdGlvbi1vZmVydGFzL0M6XFxVc2Vyc1xcRloxODkxXFxEZXNrdG9wXFxQcm95ZWN0b3NcXEFuZ3VsYXJcXHBhZ2VzZWdvdmlhL3NyY1xcYXBwXFxDb21wb25lbnRlc1xcc2VjdGlvbi1vZmVydGFzXFxzZWN0aW9uLW9mZXJ0YXMuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL0NvbXBvbmVudGVzL3NlY3Rpb24tb2ZlcnRhcy9zZWN0aW9uLW9mZXJ0YXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxXQUFBO0VBQ0EsaUJBQUE7RUFDQSxpQkFBQTtBQ0NKOztBREVBO0VBQ0ksY0FBQTtBQ0NKOztBREVBO0VBQ0ksU0FBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvQ29tcG9uZW50ZXMvc2VjdGlvbi1vZmVydGFzL3NlY3Rpb24tb2ZlcnRhcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImltZyB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1heC1oZWlnaHQ6IDMwMHB4O1xyXG4gICAgbWluLWhlaWdodDogNDAwcHg7XHJcbn1cclxuXHJcbmg0IHtcclxuICAgIGNvbG9yOiAjMDI3NWQ4O1xyXG59XHJcblxyXG4ucm93IHtcclxuICAgIG1hcmdpbjogMDtcclxufSIsImltZyB7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXgtaGVpZ2h0OiAzMDBweDtcbiAgbWluLWhlaWdodDogNDAwcHg7XG59XG5cbmg0IHtcbiAgY29sb3I6ICMwMjc1ZDg7XG59XG5cbi5yb3cge1xuICBtYXJnaW46IDA7XG59Il19 */");
 
 /***/ }),
 
@@ -801,7 +975,7 @@ SectionServiciosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("img {\n  max-height: 400px;\n  min-height: 200px;\n  width: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50ZXMvc2VjdGlvbi10ZXh0LWltZy9DOlxcVXNlcnNcXEZaMTg5MVxcRGVza3RvcFxcUHJveWVjdG9zXFxBbmd1bGFyXFxwYWdlc2Vnb3ZpYS9zcmNcXGFwcFxcQ29tcG9uZW50ZXNcXHNlY3Rpb24tdGV4dC1pbWdcXHNlY3Rpb24tdGV4dC1pbWcuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL0NvbXBvbmVudGVzL3NlY3Rpb24tdGV4dC1pbWcvc2VjdGlvbi10ZXh0LWltZy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGlCQUFBO0VBQ0EsaUJBQUE7RUFDQSxXQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9Db21wb25lbnRlcy9zZWN0aW9uLXRleHQtaW1nL3NlY3Rpb24tdGV4dC1pbWcuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpbWcge1xyXG4gICAgbWF4LWhlaWdodDogNDAwcHg7XHJcbiAgICBtaW4taGVpZ2h0OiAyMDBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG59IiwiaW1nIHtcbiAgbWF4LWhlaWdodDogNDAwcHg7XG4gIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICB3aWR0aDogMTAwJTtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".refri {\n  width: 250px;\n  height: 500px;\n}\n\n.lavadora {\n  width: 300px;\n  height: 450px;\n}\n\n.tv {\n  max-height: 300px;\n  min-height: 200px;\n}\n\n.otros {\n  width: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQ29tcG9uZW50ZXMvc2VjdGlvbi10ZXh0LWltZy9DOlxcVXNlcnNcXEZaMTg5MVxcRGVza3RvcFxcUHJveWVjdG9zXFxBbmd1bGFyXFxwYWdlc2Vnb3ZpYS9zcmNcXGFwcFxcQ29tcG9uZW50ZXNcXHNlY3Rpb24tdGV4dC1pbWdcXHNlY3Rpb24tdGV4dC1pbWcuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL0NvbXBvbmVudGVzL3NlY3Rpb24tdGV4dC1pbWcvc2VjdGlvbi10ZXh0LWltZy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFLQTtFQUNJLFlBQUE7RUFDQSxhQUFBO0FDSko7O0FET0E7RUFDSSxZQUFBO0VBQ0EsYUFBQTtBQ0pKOztBRE9BO0VBQ0ksaUJBQUE7RUFDQSxpQkFBQTtBQ0pKOztBRFFBO0VBQ0ksV0FBQTtBQ0xKIiwiZmlsZSI6InNyYy9hcHAvQ29tcG9uZW50ZXMvc2VjdGlvbi10ZXh0LWltZy9zZWN0aW9uLXRleHQtaW1nLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gaW1nIHtcclxuLy8gICAgIG1heC1oZWlnaHQ6IDQwMHB4O1xyXG4vLyAgICAgbWluLWhlaWdodDogMjAwcHg7XHJcbi8vICAgICB3aWR0aDogMTAwJTtcclxuLy8gfVxyXG4ucmVmcmkge1xyXG4gICAgd2lkdGg6IDI1MHB4O1xyXG4gICAgaGVpZ2h0OiA1MDBweDtcclxufVxyXG5cclxuLmxhdmFkb3JhIHtcclxuICAgIHdpZHRoOiAzMDBweDtcclxuICAgIGhlaWdodDogNDUwcHg7XHJcbn1cclxuXHJcbi50diB7XHJcbiAgICBtYXgtaGVpZ2h0OiAzMDBweDtcclxuICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xyXG4gICAgLy8gd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5vdHJvcyB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufSIsIi5yZWZyaSB7XG4gIHdpZHRoOiAyNTBweDtcbiAgaGVpZ2h0OiA1MDBweDtcbn1cblxuLmxhdmFkb3JhIHtcbiAgd2lkdGg6IDMwMHB4O1xuICBoZWlnaHQ6IDQ1MHB4O1xufVxuXG4udHYge1xuICBtYXgtaGVpZ2h0OiAzMDBweDtcbiAgbWluLWhlaWdodDogMjAwcHg7XG59XG5cbi5vdHJvcyB7XG4gIHdpZHRoOiAxMDAlO1xufSJdfQ== */");
 
 /***/ }),
 
@@ -831,6 +1005,245 @@ SectionTextImgComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./section-text-img.component.scss */ "./src/app/Componentes/section-text-img/section-text-img.component.scss")).default]
     })
 ], SectionTextImgComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/Modulos/audio-video/audio-video.module.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/Modulos/audio-video/audio-video.module.ts ***!
+  \***********************************************************/
+/*! exports provided: AudioVideoModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AudioVideoModule", function() { return AudioVideoModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+
+
+
+let AudioVideoModule = class AudioVideoModule {
+};
+AudioVideoModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+        ]
+    })
+], AudioVideoModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/Modulos/home/home.module.ts":
+/*!*********************************************!*\
+  !*** ./src/app/Modulos/home/home.module.ts ***!
+  \*********************************************/
+/*! exports provided: HomeModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeModule", function() { return HomeModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _Componentes_Modals_mensaje_mensaje_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Componentes/Modals/mensaje/mensaje.component */ "./src/app/Componentes/Modals/mensaje/mensaje.component.ts");
+/* harmony import */ var _Componentes_section_chat_section_chat_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Componentes/section-chat/section-chat.component */ "./src/app/Componentes/section-chat/section-chat.component.ts");
+/* harmony import */ var _Componentes_section_contactos_section_contactos_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Componentes/section-contactos/section-contactos.component */ "./src/app/Componentes/section-contactos/section-contactos.component.ts");
+/* harmony import */ var _Componentes_section_servicios_section_servicios_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Componentes/section-servicios/section-servicios.component */ "./src/app/Componentes/section-servicios/section-servicios.component.ts");
+/* harmony import */ var _Componentes_section_ofertas_section_ofertas_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Componentes/section-ofertas/section-ofertas.component */ "./src/app/Componentes/section-ofertas/section-ofertas.component.ts");
+/* harmony import */ var _Componentes_section_text_img_section_text_img_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../Componentes/section-text-img/section-text-img.component */ "./src/app/Componentes/section-text-img/section-text-img.component.ts");
+/* harmony import */ var _Componentes_intro_intro_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../Componentes/intro/intro.component */ "./src/app/Componentes/intro/intro.component.ts");
+/* harmony import */ var _Componentes_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../Componentes/nav-bar/nav-bar.component */ "./src/app/Componentes/nav-bar/nav-bar.component.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./home/home.component */ "./src/app/Modulos/home/home/home.component.ts");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let HomeModule = class HomeModule {
+};
+HomeModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [
+            _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
+            _Componentes_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_10__["NavBarComponent"],
+            _Componentes_intro_intro_component__WEBPACK_IMPORTED_MODULE_9__["IntroComponent"],
+            _Componentes_section_text_img_section_text_img_component__WEBPACK_IMPORTED_MODULE_8__["SectionTextImgComponent"],
+            _Componentes_section_ofertas_section_ofertas_component__WEBPACK_IMPORTED_MODULE_7__["SectionOfertasComponent"],
+            _Componentes_section_servicios_section_servicios_component__WEBPACK_IMPORTED_MODULE_6__["SectionServiciosComponent"],
+            _Componentes_section_contactos_section_contactos_component__WEBPACK_IMPORTED_MODULE_5__["SectionContactosComponent"],
+            _Componentes_section_chat_section_chat_component__WEBPACK_IMPORTED_MODULE_4__["SectionChatComponent"],
+            _Componentes_Modals_mensaje_mensaje_component__WEBPACK_IMPORTED_MODULE_3__["MensajeComponent"],
+            _home_home_component__WEBPACK_IMPORTED_MODULE_17__["HomeComponent"],
+        ],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_12__["BrowserModule"],
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_13__["AppRoutingModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_14__["FormsModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_14__["ReactiveFormsModule"],
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__["BrowserAnimationsModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatCardModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatListModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatToolbarModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatInputModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatFormFieldModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatIconModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatSnackBarModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_16__["MatDialogModule"],
+        ],
+        entryComponents: [_Componentes_Modals_mensaje_mensaje_component__WEBPACK_IMPORTED_MODULE_3__["MensajeComponent"]],
+    })
+], HomeModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/Modulos/home/home/home.component.scss":
+/*!*******************************************************!*\
+  !*** ./src/app/Modulos/home/home/home.component.scss ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL01vZHVsb3MvaG9tZS9ob21lL2hvbWUuY29tcG9uZW50LnNjc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/Modulos/home/home/home.component.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/Modulos/home/home/home.component.ts ***!
+  \*****************************************************/
+/*! exports provided: HomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let HomeComponent = class HomeComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-home',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/Modulos/home/home/home.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./home.component.scss */ "./src/app/Modulos/home/home/home.component.scss")).default]
+    })
+], HomeComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/Modulos/televisores/televisores.module.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/Modulos/televisores/televisores.module.ts ***!
+  \***********************************************************/
+/*! exports provided: TelevisoresModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TelevisoresModule", function() { return TelevisoresModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _televisores_televisores_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./televisores/televisores.component */ "./src/app/Modulos/televisores/televisores/televisores.component.ts");
+
+
+
+
+let TelevisoresModule = class TelevisoresModule {
+};
+TelevisoresModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [_televisores_televisores_component__WEBPACK_IMPORTED_MODULE_3__["TelevisoresComponent"]],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+        ],
+    })
+], TelevisoresModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/Modulos/televisores/televisores/televisores.component.scss":
+/*!****************************************************************************!*\
+  !*** ./src/app/Modulos/televisores/televisores/televisores.component.scss ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".header {\n  padding: 70px;\n  color: white;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvTW9kdWxvcy90ZWxldmlzb3Jlcy90ZWxldmlzb3Jlcy9DOlxcVXNlcnNcXEZaMTg5MVxcRGVza3RvcFxcUHJveWVjdG9zXFxBbmd1bGFyXFxwYWdlc2Vnb3ZpYS9zcmNcXGFwcFxcTW9kdWxvc1xcdGVsZXZpc29yZXNcXHRlbGV2aXNvcmVzXFx0ZWxldmlzb3Jlcy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvTW9kdWxvcy90ZWxldmlzb3Jlcy90ZWxldmlzb3Jlcy90ZWxldmlzb3Jlcy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7RUFDQSxZQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9Nb2R1bG9zL3RlbGV2aXNvcmVzL3RlbGV2aXNvcmVzL3RlbGV2aXNvcmVzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlciB7XHJcbiAgICBwYWRkaW5nOiA3MHB4O1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59IiwiLmhlYWRlciB7XG4gIHBhZGRpbmc6IDcwcHg7XG4gIGNvbG9yOiB3aGl0ZTtcbn0iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/Modulos/televisores/televisores/televisores.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/Modulos/televisores/televisores/televisores.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: TelevisoresComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TelevisoresComponent", function() { return TelevisoresComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let TelevisoresComponent = class TelevisoresComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+TelevisoresComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-televisores',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./televisores.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/Modulos/televisores/televisores/televisores.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./televisores.component.scss */ "./src/app/Modulos/televisores/televisores/televisores.component.scss")).default]
+    })
+], TelevisoresComponent);
 
 
 
@@ -886,10 +1299,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _Modulos_home_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Modulos/home/home/home.component */ "./src/app/Modulos/home/home/home.component.ts");
+/* harmony import */ var _Modulos_televisores_televisores_televisores_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Modulos/televisores/televisores/televisores.component */ "./src/app/Modulos/televisores/televisores/televisores.component.ts");
+/* harmony import */ var _Componentes_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Componentes/not-found/not-found.component */ "./src/app/Componentes/not-found/not-found.component.ts");
 
 
 
-const routes = [];
+
+
+
+const routes = [
+    { path: '', redirectTo: 'Home', pathMatch: 'full' },
+    { path: 'Home', component: _Modulos_home_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"] },
+    { path: 'Televisores', component: _Modulos_televisores_televisores_televisores_component__WEBPACK_IMPORTED_MODULE_4__["TelevisoresComponent"] },
+    { path: '**', component: _Componentes_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_5__["NotFoundComponent"] }
+];
 let AppRoutingModule = class AppRoutingModule {
 };
 AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -958,28 +1382,12 @@ AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _Componentes_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Componentes/nav-bar/nav-bar.component */ "./src/app/Componentes/nav-bar/nav-bar.component.ts");
-/* harmony import */ var _Componentes_intro_intro_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Componentes/intro/intro.component */ "./src/app/Componentes/intro/intro.component.ts");
-/* harmony import */ var _Componentes_section_text_img_section_text_img_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Componentes/section-text-img/section-text-img.component */ "./src/app/Componentes/section-text-img/section-text-img.component.ts");
-/* harmony import */ var _Componentes_section_ofertas_section_ofertas_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Componentes/section-ofertas/section-ofertas.component */ "./src/app/Componentes/section-ofertas/section-ofertas.component.ts");
-/* harmony import */ var _Componentes_section_servicios_section_servicios_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Componentes/section-servicios/section-servicios.component */ "./src/app/Componentes/section-servicios/section-servicios.component.ts");
-/* harmony import */ var _Componentes_section_contactos_section_contactos_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Componentes/section-contactos/section-contactos.component */ "./src/app/Componentes/section-contactos/section-contactos.component.ts");
-/* harmony import */ var _Componentes_section_chat_section_chat_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Componentes/section-chat/section-chat.component */ "./src/app/Componentes/section-chat/section-chat.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-
-
-
-
-
-
-
-
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _Modulos_home_home_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Modulos/home/home.module */ "./src/app/Modulos/home/home.module.ts");
+/* harmony import */ var _Componentes_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Componentes/not-found/not-found.component */ "./src/app/Componentes/not-found/not-found.component.ts");
+/* harmony import */ var _Modulos_televisores_televisores_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Modulos/televisores/televisores.module */ "./src/app/Modulos/televisores/televisores.module.ts");
+/* harmony import */ var _Modulos_audio_video_audio_video_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Modulos/audio-video/audio-video.module */ "./src/app/Modulos/audio-video/audio-video.module.ts");
 
 
 
@@ -990,34 +1398,41 @@ __webpack_require__.r(__webpack_exports__);
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-            _Componentes_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_5__["NavBarComponent"],
-            _Componentes_intro_intro_component__WEBPACK_IMPORTED_MODULE_6__["IntroComponent"],
-            _Componentes_section_text_img_section_text_img_component__WEBPACK_IMPORTED_MODULE_7__["SectionTextImgComponent"],
-            _Componentes_section_ofertas_section_ofertas_component__WEBPACK_IMPORTED_MODULE_8__["SectionOfertasComponent"],
-            _Componentes_section_servicios_section_servicios_component__WEBPACK_IMPORTED_MODULE_9__["SectionServiciosComponent"],
-            _Componentes_section_contactos_section_contactos_component__WEBPACK_IMPORTED_MODULE_10__["SectionContactosComponent"],
-            _Componentes_section_chat_section_chat_component__WEBPACK_IMPORTED_MODULE_11__["SectionChatComponent"]
+            // AppComponent,
+            // NavBarComponent,
+            // IntroComponent,
+            // SectionTextImgComponent,
+            // SectionOfertasComponent,
+            // SectionServiciosComponent,
+            // SectionContactosComponent,
+            // SectionChatComponent,
+            // MensajeComponent,
+            _Componentes_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_4__["NotFoundComponent"]
         ],
         imports: [
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_14__["FormsModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_14__["ReactiveFormsModule"],
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_13__["MatCardModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_13__["MatListModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_13__["MatButtonModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_13__["MatToolbarModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_13__["MatInputModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_13__["MatFormFieldModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_13__["MatIconModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_13__["MatSnackBarModule"],
+            _Modulos_televisores_televisores_module__WEBPACK_IMPORTED_MODULE_5__["TelevisoresModule"],
+            _Modulos_home_home_module__WEBPACK_IMPORTED_MODULE_3__["HomeModule"],
+            _Modulos_audio_video_audio_video_module__WEBPACK_IMPORTED_MODULE_6__["AudioVideoModule"]
+            // BrowserModule,
+            // AppRoutingModule,
+            // FormsModule,
+            // ReactiveFormsModule,
+            // BrowserAnimationsModule,
+            // MatCardModule,
+            // MatListModule,
+            // MatButtonModule,
+            // MatToolbarModule,
+            // MatInputModule,
+            // MatFormFieldModule,
+            // MatIconModule,
+            // MatSnackBarModule,
+            // MatDialogModule,
         ],
+        // entryComponents:[MensajeComponent],
         providers: [],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
     })
 ], AppModule);
 
